@@ -1,4 +1,4 @@
-nandokstronet.github.io
+Nando Kstro Net
 =======================
 
 My blog in Github
