@@ -1,4 +1,6 @@
-$('.hidden').hide();
+$(document).ready(function(){
+	$('.hidden').hide();
+});
 
 $(".pin_map").click(function(){
   $(".mask_map").fadeIn();
