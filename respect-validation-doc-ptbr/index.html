@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Respect\Validation PT-BR</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"></script>
+</head>
+<body data-twttr-rendered="true">
+		<header>  
+		            <div class="social">
+                <div class="facebook">
+                    <div id="fb-root"></div>
+                    <script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=397727050278644";fjs.parentNode.insertBefore(js,fjs)})(document,"script","facebook-jssdk");</script>
+                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                </div>
+                <div class="twitter">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="NandoKstroNet" data-lang="pt" data-hashtags="respectrest">Tweetar</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                <div class="github">
+                    <iframe src="http://ghbtns.com/github-btn.html?user=NandoKstroNet&repo=docsptbrrespectvalidation&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=NandoKstroNet&repo=docsptbrrespectvalidation&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="75" height="20"></iframe>
+                    <a href="https://github.com/NandoKstroNet/docsptbrrespectvalidation"><img style="z-index: 999; position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+                </div>
+            </div>             
+            <div class="logo" id="logo">
+                <a href="http://respect.li">
+                    <img src="assets/img/respect.png" alt="Respect/Rest" width="140px"/>
+                </a>
+                <hgroup>
+                   <h1>Respect Project</h1>
+                   <h2>Respect\Validation</h2>
+                </hgroup>
+            </div>            
+    	</header>
+    	<div id="content">
+    		<p>O mecanismo de validação mais impressionante criado em PHP.</p>
+    		<ul>
+    			<li>Fluent/Chained builders like <strong>v::numeric()->positive()->between(1, 256)->validate($myNumber)</strong> (more samples below)</li>
+    			<li>Exceptions informativas, impressionantes.</li>
+    			<li>Mais de 30 validadores totalmente testados.</li>
+    		</ul>
+    		<h2 id="installation">Instalação</h2>
+    		<p>O pacotes  estão disponiveis no <a href="http://respect.li/pear" target="_blank" title="Canal Pear Respect\Validation">Pear</a> e <a href="http://packagist.org/packages/Respect/Validation" target="_blank" title="Canal Composer Respect\Validation">Composer</a>. Autoloading é compativel com <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md" target="_blank" title="PSR-0">PSR-0</a>.</p>
+
+    		<h2>Recursos</h2>
+    		<hr />
+    		<h2 id="namespace-import">Importação do Namespace</h2>
+    		<p>Respect\Validation é namespace, mas você pode tornar sua vida mais fácil importando apenas a classe em seu contexto:</p>
+<pre class="prettyprint">
+	<span class="namespace">use Respect\Validation\Validator as v;</span>
+</pre>
+			<h2 id="simple-validation">Validação Simples</h2>
+			<p>O Hello World do validador é somente isto:</p>
+<pre class="prettyprint">
+	$number = 123;
+	v::numeric()->validate($number); //true
+</pre>	
+			<h2 id="Chained Validation">Chained Validation | Validação Chained</h2>	
+			<p>É possivel utilizar os validadores em cadeias(chain). O exemplo abaixo valida um conjunto de caracteres que contém números e letras, sem espaços e está entre 1 e 15:</p>
+<pre class="prettyprint">
+	$usernameValidator = v::alnum()->noWhitespace()->length(1,15);
+	$usernameValidator->validate('alganet'); //true
+</pre>
+			<h2>Validating Object Attributes | Validação de Atributos de Objeto</h2>
+			<p>Dados o simples Objeto a seguir:</p>
+<pre class="prettyprint">
+	$user = new stdClass;
+	$user->name = 'Alexandre';
+	$user->birthdate = '1987-07-01';
+</pre>
+		<p>É possivel validar seu atributos em uma única chain:</p>
+<pre class="prettyprint">
+	$userValidator = v::attribute('name', v::string()->length(1,32))
+                  ->attribute('birthdate', v::date()->minimumAge(18));
+
+	$userValidator->validate($user); //true
+</pre>
+		<p>Validar chaves de array também é possivel utilizando <strong>v::key()</strong></p>
+		<p>Note que usamos <strong>v::string()</strong> e <strong>v::date()</strong> no inicio do validador. Embora não seja obrigatório, é uma boa prática usar o tipo do objeto validado como o primeiro nós na cadeia(chain).</p>
+		<h2 id="input-optional">Input optional | Entrada Opcional</h2>
+		<p>Todos os validadores tratam a entrada como opcional e aceitarão cadeia de caracteres válidos vazia, salvo alguma indicação contrária na documentação.</p>
+		<p>Nós usamos o validador <strong>v::notEmpty()</strong> prefixado para não permitir a entrada vazia e efetivamente definimos o campo como obrigatório, os inputs serão requeridos ou a validação falhará.</p>
+<pre class="prettyprint">
+	v::string()->notEmpty()->validate(''); //false input required
+</pre>
+		<h2 id="negating-rule">Negating Rules | Negando Regras</h2>
+        <p>Você pode usar <strong>v::not()</strong> para negar qualquer regra:</p>
+<pre class="prettyprint">
+    v::not(v::int())->validate(10); //false, input must not be integer
+</pre>
+        <h2 id="validator-reuse">Validator Reuse | Reutilização de Validador</h2>
+        <p>Uma vez criado, você pode reutilizar seu validador em qualquer lugar. Lembra <strong>$usernameValidator</strong>?</p>
+<pre class="prettyprint">
+    $usernameValidator->validate('respect');            //true
+    $usernameValidator->validate('alexandre gaigalas'); //false
+    $usernameValidator->validate('#$%');                //false
+</pre>
+    <h2 id="informative-exceptions">Informative Exceptions | Exceptions Informativas</h2>
+    <p>Quando algo está errado, o Validation pode dizer o que esta acontecendo exatamente. Para isso usamos o método <strong>assert()</strong> em vez de <strong>validate()</strong></p>
+<pre class="prettyprint">
+    try {
+        $usernameValidator->assert('really messed up screen#name');
+    } catch(\InvalidArgumentException $e) {
+        echo $e->getFullMessage();
+    }
+</pre>
+    <p>A mensagem impressa é exatamente esta, como uma árvore de texto:</p>
+<pre class="prettyprint">
+    \-All of the 3 required rules must pass
+     |-"really messed up screen#name" must contain only letters (a-z) and digits (0-9)
+     |-"really messed up screen#name" must not contain whitespace
+    \-"really messed up screen#name" must have a length between 1 and 15
+</pre>
+    <h2 id="getting-messages">Getting Messages | Recebendo mensagens</h2>
+    <p>A árvore de texto lançada pela exception é bom, mas inútilizável em um formulário html ou algo mais personalizado. Você pode usar o <strong>findMessages()</strong> para isso:</p>
+<pre class="prettyprint">
+    try {
+        $usernameValidator->assert('really messed up screen#name');
+    } catch(\InvalidArgumentException $e) {
+        var_dump($e->findMessages(array('alnum', 'length', 'noWhitespace')));
+    }
+</pre>
+    <p><strong>findMessages()</strong> retorna um array com as mensagens do validadores solicitados.</p>
+    <h2 id="custom-messages">Custom Messages | Mensagens Customizadas</h2>
+    <p>Pegar as mensagens como array é muito legal, mas as vezes você precisa customiza-las para poder apresentar aos usuários. Isto é possivel utilizando o método <strong>findMessages()</strong> assim:</p>
+<pre class="prettyprint">
+       $errors = $e->findMessages(array(
+        'alnum'        => '{{name}} must contain only letters and digits',
+        'length'       => '{{name}} must not have more than 15 chars',
+        'noWhitespace' => '{{name}} cannot contain spaces'
+    ));
+</pre>
+    <p>Para todas as mensagens, a variável <strong>{{name}}</strong> e <strong>{{input}}</strong> estão disponiveis para o template.</p>
+    <h2 id="validator-name">Validator Name | Nome do validador</h2>
+    <p>
+        Em <strong> v:: attribute()</strong> e <strong>v::key()</strong>, <strong>{{name}}</strong> é o nome do attribute/key. Você pode customizar um validador usando um nome:</p>
+<pre class="prettyprint">
+    v::date('Y-m-d')->between('1980-02-02', 'now')->setName('Member Since');
+</pre>
+    <h2 id="zendsmfony-validators">Zend/Symfony Validators | Validadores Zend/Symfony</h2>
+    <p>É possivel utilizar também validadores de outros frameworks, se eles estiverem devidamente instalados:</p>
+<pre class="prettyprint">
+    $hostnameValidator = v::zend('Hostname')->assert('google.com');
+    $timeValidator     = v::sf('Time')->assert('22:00:01');
+</pre>
+    <h2 id="validation-methods">Validation Methods | Métodos de Validação</h2>
+    <p>Já vimos o <strong>Validate()</strong> que retorna <strong>true ou false</strong> e <strong>assert()</strong> que lança um relatório de validação completa. Há também um método chamado <strong>check()</strong> que retorna uma exceção com o primeiro erro encontrado apenas:</p>
+<pre class="prettyprint">
+    try {
+        $usernameValidator->check('really messed up screen#name');
+    } catch(\InvalidArgumentException $e) {
+       echo $e->getMainMessage();
+    }
+</pre>
+    <p>Mensagem:</p>
+<pre class="prettyprint">
+    "really messed up screen#name" must contain only letters (a-z) and digits (0-9)
+</pre>
+    <h2 id="reference">Reference | Referência</h2>
+    <h2 id="types">Types | Tipos</h2>
+    <p>
+        <ul>
+            <li>v::arr()</li>
+            <li>v::bool()</li>
+            <li>v::date()</li>
+            <li>v::float()</li>
+            <li>v::hexa() (deprecated)</li>
+            <li>v::instance()</li>
+            <li>v::int()</li>
+            <li>v::nullValue()</li>
+            <li>v::numeric()</li>
+            <li>v::object()</li>
+            <li>v::string()</li>
+            <li>v::xdigit()</li>
+        </ul>
+    </p>
+    <h2 id="generics">Generics | Genéricos</h2>
+    <p>
+        <ul>
+            <li>v::call()</li>
+            <li>v::callback()</li>
+            <li>v::not()</li>
+            <li>v::when()</li>
+            <li>v::alwaysValid()</li>
+            <li>v::alwaysInvalid()</li>
+        </ul>
+    </p>    
+    <h2 id="comparing-values">Comparing Values | Comparando Valores</h2>
+    <p>
+        <ul>
+            <li>v::between()</li>
+            <li>v::equals()</li>
+            <li>v::max()</li>
+            <li>v::min()</li>
+        </ul>
+    </p>    
+    <h2 id="numeric">Numeric</h2>
+    <p>
+        <ul>
+            <li>v::between()</li>
+            <li>v::bool()</li>
+            <li>v::even()</li>
+            <li>v::float()
+            <li>v::hexa() (deprecated)</li>
+            <li>v::int()</li>
+            <li>v::multiple()</li>
+            <li>v::negative()</li>
+            <li>v::notEmpty()</li>
+            <li>v::numeric()</li>
+            <li>v::odd()</li>
+            <li>v::perfectSquare()</li>
+            <li>v::positive()</li>
+            <li>v::primeNumber()</li>
+            <li>v::roman()</li>
+            <li>v::xdigit()</li>
+        </ul>
+    </p>    
+    <h2 id="string">String</h2>
+    <p>
+        <ul>
+            <li>v::alnum()</li>
+            <li>v::alpha()</li>
+            <li>v::between()</li>
+            <li>v::charset()</li>
+            <li>v::consonants() (deprecated)</li>
+            <li>v::consonant()</li>
+            <li>v::contains()</li>
+            <li>v::cntrl()</li>
+            <li>v::digits() (deprecated)</li>
+            <li>v::digit()</li>
+            <li>v::endsWith()</li>
+            <li>v::in()</li>
+            <li>v::graph()</li>
+            <li>v::length()</li>
+            <li>v::lowercase()</li>
+            <li>v::notEmpty()</li>
+            <li>v::noWhitespace()</li>
+            <li>v::prnt()</li>
+            <li>v::punct()</li>
+            <li>v::regex()</li>
+            <li>v::slug()</li>
+            <li>v::space()</li>
+            <li>v::startsWith()</li>
+            <li>v::uppercase()</li>
+            <li>v::uppercase()</li>
+            <li>v::version()</li>
+            <li>v::vowels() (deprecated)</li>
+            <li>v::vowel()</li>
+            <li>v::xdigit()</li>
+        </ul>
+    </p>    
+    <h2 id="arrays">Arrays</h2>
+    <p>
+        <ul> 
+            <li>v::arr()</li>
+            <li>v::contains()</li>
+            <li>v::each()</li>
+            <li>v::endsWith()</li>
+            <li>v::in()</li>
+            <li>v::key()</li>
+            <li>v::length()</li>
+            <li>v::notEmpty()</li>
+            <li>v::startsWith()</li>
+        </ul>
+    </p>    
+    <h2 id="objects">Objects | Objetos</h2>
+    <p>
+        <ul> 
+            <li>v::attribute()</li>
+            <li>v::instance()</li>
+            <li>v::length()</li>
+        </ul>
+    </p>    
+    <h2 id="date-and-time">Date and Time | Datas e Horas</h2>
+    <p>
+        <ul>
+            <li>v::between()</li>
+            <li>v::date()</li>
+            <li>v::leapDate()</li>
+            <li>v::leapYear()</li>
+        </ul>
+    </p>    
+    <h2 id="group-validators">Group Validators | Grupo de Validadores</h2>
+    <p>
+        <ul>    
+            <li>v::allOf()</li>
+            <li>v::noneOf()</li>
+            <li>v::oneOf()</li>
+        </ul>
+    </p>    
+    <h2 id="regional">Regional</h2>
+    <p>
+        <ul>     
+            <li>v::tld()</li>
+            <li>v::countryCode()</li>
+        </ul>
+    </p>    
+    <h2 id="files">Files</h2>
+    <p>
+        <ul>
+             <li>v::directory()</li>
+             <li>v::exists()</li>
+             <li>v::file()</li>
+             <li>v::readable()</li>
+             <li>v::symbolicLink()</li>
+             <li>v::uploaded()</li>
+             <li>v::writable()</li>
+       </ul>
+    </p>    
+    <h2 id="other">Other</h2>
+    <p>
+        <ul> 
+            <li>v::cnh()</li>
+            <li>v::cnpj()</li>
+            <li>v::cpf()</li>
+            <li>v::domain()</li>
+            <li>v::email()</li>
+            <li>v::ip()</li>
+            <li>v::json()</li>
+            <li>v::macAddress()</li>
+            <li>v::phone()</li>
+            <li>v::sf()</li>
+            <li>v::zend()</li>
+        </ul>
+    </p>
+    <h2 id="alphabetically">Alphabetically | Alfabético</h2>
+    <h3 id="vallofv1-v2-v3"><strong>v::allOf($v1, $v2, $v3...)</strong></h3>
+    <p>Irá validar se todos os validadores internos forem válidos:</p>
+<pre class="prettyprint">
+    v::allOf(
+        v::int(),
+        v::positive()
+    )->validate(15); //true
+</pre>
+    <p>Isto é semelhante a cadéia, porém sua sintaxe permite definir nomes personalizados para cada nó:</p> 
+<pre class="prettyprint">
+    v::allOf(
+        v::int()->setName('Account Number'),
+        v::positive()->setName('Higher Than Zero')
+    )->setName('Positive integer')
+        ->validate(15); //true
+</pre> 
+    <p>Veja também:</p>
+    <ul>
+        <li>v::oneOf() - Validates if at least one inner rule pass</li>
+        <li>v::noneOf() - Validates if no inner rules pass</li>
+        <li>v::when() - A Ternary validator</li>
+    </ul> 
+    <h2 id="alnum"><strong>v::alnum()</strong></h2> <br>
+    <h3 id="valnumstring-additionalchars"><strong>v::alnum(string $additionalChars)</strong></h3> 
+    <p>Validadores de caracteres alfanumérico de a-Z e 0-9</p> 
+<pre class="prettyprint">
+    v::alnum()->validate('foo 123'); //true
+</pre>
+    <p>Um parâmetro para caracteres extras, também pode ser adicionado:</p>
+<pre class="prettyprint">
+    v::alnum('-')->validate('foo - 123'); //true
+</pre>
+    <p>Este validador permite espaços em branco, caso você queira removê-los, acrescente o método <strong>->noWhitespace() </strong> a cadeia:</p>
+<pre class="prettyprint">
+    v::alnum()->noWhitespace->validate('foo 123'); //false
+</pre>
+    <p>Por default os valores vazios(empty) são aceitos, caso você queira invalidá-los, adicione o método <strong>->notEmpty()</strong> à cadeia:</p>
+<pre class="prettyprint">
+    v::alnum()->notEmpty()->validate(''); //false
+</pre>
+    <p>Você pode restringir os casos usando os validadores <strong>->lowercase()</strong> e <strong>->uppercase()</strong>:</p>
+<pre class="prettyprint">
+    v::alnum()->uppercase()->validate('aaa'); //false
+</pre>
+    <p>Template message para este validador inclui <strong>{{additionalChars}}</strong> com uma cadéia de caracteres passadas como parâmetros.</p>
+    <p>Veja também:</p>
+    <ul>
+        <li>v::alpha() - a-Z, empty or whitespace only</li>
+        <li>v::digit() - 0-9, empty or whitespace only</li>
+        <li>v::consonant()</li>
+        <li>v::vowel()</li>
+    </ul>
+</div>
+</body>
+</html>
