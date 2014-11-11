@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://nandokstronet.github.io/links-importantes-gdg/</loc>
+    
+    <lastmod>2014-11-11T00:00:00-03:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://nandokstronet.github.io/blog/</loc>
     
     <lastmod>2014-10-01T00:00:00-03:00</lastmod>
@@ -13,28 +21,28 @@
   
   <url>
     <loc>http://nandokstronet.github.io/about/</loc>
-    <lastmod>2014-10-01T12:25:57-03:00</lastmod>
+    <lastmod>2014-11-11T16:20:29-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://nandokstronet.github.io/</loc>
-    <lastmod>2014-10-01T12:25:57-03:00</lastmod>
+    <lastmod>2014-11-11T16:20:29-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://nandokstronet.github.io/posts/</loc>
-    <lastmod>2014-10-01T12:25:57-03:00</lastmod>
+    <lastmod>2014-11-11T16:20:29-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://nandokstronet.github.io/theme-setup/</loc>
-    <lastmod>2014-10-01T12:25:57-03:00</lastmod>
+    <lastmod>2014-11-11T16:20:29-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
