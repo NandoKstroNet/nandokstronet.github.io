@@ -1,52 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  
   <url>
-    <loc>http://nandokstronet.github.io/links-importantes-gdg/</loc>
-    
-    <lastmod>2014-11-11T00:00:00-03:00</lastmod>
-    
-    <priority>0.8</priority>
+    <loc>http://127.0.0.1:4000//introducao-ao-silex/</loc>
+    <lastmod>2015-06-10T00:00:00-03:00</lastmod>
   </url>
-  
   <url>
-    <loc>http://nandokstronet.github.io/blog/</loc>
-    
-    <lastmod>2014-10-01T00:00:00-03:00</lastmod>
-    
-    <priority>0.8</priority>
+    <loc>http://127.0.0.1:4000//about/</loc>
   </url>
-  
-  
   <url>
-    <loc>http://nandokstronet.github.io/about/</loc>
-    <lastmod>2014-11-11T16:20:29-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>http://127.0.0.1:4000//e-book/</loc>
   </url>
-  
   <url>
-    <loc>http://nandokstronet.github.io/</loc>
-    <lastmod>2014-11-11T16:20:29-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>http://127.0.0.1:4000//</loc>
   </url>
-  
   <url>
-    <loc>http://nandokstronet.github.io/posts/</loc>
-    <lastmod>2014-11-11T16:20:29-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>http://127.0.0.1:4000//projects/</loc>
   </url>
-  
   <url>
-    <loc>http://nandokstronet.github.io/theme-setup/</loc>
-    <lastmod>2014-11-11T16:20:29-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>http://127.0.0.1:4000//theme-setup/</loc>
   </url>
-  
-  
-  
+  <url>
+    <loc>http://127.0.0.1:4000//posts/</loc>
+  </url>
 </urlset>
