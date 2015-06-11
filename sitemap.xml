@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://127.0.0.1:4000//introducao-ao-silex/</loc>
+    <loc>http://nandokstronet.github.io/introducao-ao-silex/</loc>
     <lastmod>2015-06-10T00:00:00-03:00</lastmod>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000//about/</loc>
+    <loc>http://nandokstronet.github.io/about/</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000//e-book/</loc>
+    <loc>http://nandokstronet.github.io/e-book/</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000//</loc>
+    <loc>http://nandokstronet.github.io/</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000//projects/</loc>
+    <loc>http://nandokstronet.github.io/projects/</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000//theme-setup/</loc>
+    <loc>http://nandokstronet.github.io/theme-setup/</loc>
   </url>
   <url>
-    <loc>http://127.0.0.1:4000//posts/</loc>
+    <loc>http://nandokstronet.github.io/posts/</loc>
   </url>
 </urlset>

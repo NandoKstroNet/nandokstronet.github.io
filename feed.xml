@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Nando Kstro Net Blog | Web Developer Contents</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://127.0.0.1:4000//feed.xml" />
-<link rel="alternate" type="text/html" href="http://127.0.0.1:4000/" />
-<updated>2015-06-11T00:14:46-03:00</updated>
-<id>http://127.0.0.1:4000//</id>
+<link rel="self" type="application/atom+xml" href="http://nandokstronet.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://nandokstronet.github.io" />
+<updated>2015-06-11T00:19:22-03:00</updated>
+<id>http://nandokstronet.github.io/</id>
 <author>
   <name>Nando Kstro Net</name>
-  <uri>http://127.0.0.1:4000//</uri>
+  <uri>http://nandokstronet.github.io/</uri>
   <email>nandokstro@phpmaranhao.com.br</email>
 </author>
 
@@ -17,14 +17,14 @@
 
 <entry>
   <title type="html"><![CDATA[[Introdução ao Silex] - Hello World]]></title>
-  <link rel="alternate" type="text/html" href="http://127.0.0.1:4000//introducao-ao-silex/" />
-  <id>http://127.0.0.1:4000//introducao-ao-silex</id>
+  <link rel="alternate" type="text/html" href="http://nandokstronet.github.io/introducao-ao-silex/" />
+  <id>http://nandokstronet.github.io/introducao-ao-silex</id>
   <updated>2014-10-01T00:00:00-00:00</updated>
   <published>2015-06-10T00:00:00-03:00</published>
   
   <author>
     <name>Nando Kstro Net</name>
-    <uri>http://127.0.0.1:4000/</uri>
+    <uri>http://nandokstronet.github.io</uri>
     <email>nandokstro@phpmaranhao.com.br</email>
   </author>
   <content type="html">&lt;!-- &lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
@@ -43,7 +43,7 @@
 
 &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/k3FsiOJ-tTw&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://127.0.0.1:4000//introducao-ao-silex/&quot;&gt;[Introdução ao Silex] - Hello World&lt;/a&gt; was originally published by Nando Kstro Net at &lt;a href=&quot;http://127.0.0.1:4000/&quot;&gt;Nando Kstro Net Blog | Web Developer Contents&lt;/a&gt; on June 10, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://nandokstronet.github.io/introducao-ao-silex/&quot;&gt;[Introdução ao Silex] - Hello World&lt;/a&gt; was originally published by Nando Kstro Net at &lt;a href=&quot;http://nandokstronet.github.io&quot;&gt;Nando Kstro Net Blog | Web Developer Contents&lt;/a&gt; on June 10, 2015.&lt;/p&gt;</content>
 </entry>
 
 </feed>
