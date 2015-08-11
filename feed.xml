@@ -4,13 +4,66 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://nandokstronet.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://nandokstronet.github.io" />
-<updated>2015-08-10T18:00:27-03:00</updated>
+<updated>2015-08-11T11:43:54-03:00</updated>
 <id>http://nandokstronet.github.io/</id>
 <author>
   <name>Nando Kstro Net</name>
   <uri>http://nandokstronet.github.io/</uri>
   <email>nandokstro@phpmaranhao.com.br</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Curso BeMobile.Ninja em São Luis - MA]]></title>
+  <link rel="alternate" type="text/html" href="http://nandokstronet.github.io/sobre-o-curso-be-mobile-ninja/" />
+  <id>http://nandokstronet.github.io/sobre-o-curso-be-mobile-ninja</id>
+  <updated>2015-08-11T00:00:00-00:00</updated>
+  <published>2015-08-11T00:00:00-03:00</published>
+  
+  <author>
+    <name>Nando Kstro Net</name>
+    <uri>http://nandokstronet.github.io</uri>
+    <email>nandokstro@phpmaranhao.com.br</email>
+  </author>
+  <content type="html">&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Overview&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;div id=&quot;drawer&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#sobre-o-curso&quot; id=&quot;markdown-toc-sobre-o-curso&quot;&gt;Sobre o Curso&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#em-so-luis&quot; id=&quot;markdown-toc-em-so-luis&quot;&gt;Em São Luis&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#mais-informaes&quot; id=&quot;markdown-toc-mais-informaes&quot;&gt;Mais informações&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- /#table-of-contents --&gt;
+
+&lt;h2 id=&quot;sobre-o-curso&quot;&gt;Sobre o Curso&lt;/h2&gt;
+&lt;p&gt;O BeMobile.Ninja é um curso ministrado por nosso amigo &lt;a href=&quot;https://www.facebook.com/GustavoCostaW?ref=br_rs&quot; target=&quot;_blank&quot;&gt;Gustavo Costa&lt;/a&gt;, neste treinamento ele mostra como criar aplicações mobile híbridas utilizando o Cordova,AngularJS e Material Design.
+O curso têm carga-horária de 20h, dois dias intesivos com foco na prática. Mais informações sobre o curso &lt;a href=&quot;http://bemobile.ninja&quot; target=&quot;_blank&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;em-so-luis&quot;&gt;Em São Luis&lt;/h2&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://learning.codeexperts.com.br&quot; target=&quot;_blank&quot;&gt;Code Experts Learning&lt;/a&gt; em parceria com o BeMobile.Ninja, está organizando uma edição deste treinamento aqui em nossa cidade, São Luis - MA. Para que o mesmo torne-se realidade e de fato aconteça!&lt;/p&gt;
+
+&lt;p&gt;Precisamos formar uma turma com no minimo 12 pessoas.&lt;/p&gt;
+
+&lt;p&gt;O valor do curso é R$ 350,00. Que pode ser pago à vista ou parcelado diretamente no site(assim que abrirem as inscrições no mesmo).
+Se você têm interesse em participar do curso, inscreva-se em nosso formulário de &lt;a href=&quot;http://goo.gl/forms/VTbvnBgU2J&quot; target=&quot;_blank&quot;&gt;pré-inscrição&lt;/a&gt; para podermos fazer os levantamentos.
+Demais dúvidas, contatem-me através do learning@codeexperts.com.br ou de minhas redes sociais, que podem ser encontradas na barra lateral deste blog.&lt;/p&gt;
+
+&lt;h2 id=&quot;mais-informaes&quot;&gt;Mais informações&lt;/h2&gt;
+&lt;p&gt;O Gustavo gravou um video especial pra São Luis, com algumas informações úteis sobre o treinamento. Abaixo segue o video na integra.&lt;/p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/m4JPOJHe86A&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Obrigado por acreditar nesta iniciativa, desejo sucesso! Abs!&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://nandokstronet.github.io/sobre-o-curso-be-mobile-ninja/&quot;&gt;Curso BeMobile.Ninja em São Luis - MA&lt;/a&gt; was originally published by Nando Kstro Net at &lt;a href=&quot;http://nandokstronet.github.io&quot;&gt;Nando Kstro Net Blog | Web Developer Contents&lt;/a&gt; on August 11, 2015.&lt;/p&gt;</content>
+</entry>
 
 
   
